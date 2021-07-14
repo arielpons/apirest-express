@@ -8,8 +8,8 @@ const routesShopping = require('./routes/shopping');
 
 const app = express();
 
-console.log("Hola");
-
+app.use(express.text());
+app.use(express.json());
 app.use(morgan('tiny'));
 app.use('/usuarios', routesUsuarios);
 app.use('/comercio', routesComercios);

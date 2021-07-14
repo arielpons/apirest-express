@@ -15,7 +15,7 @@ const {
     validarPutComercio,
 } = require('../middlewares/validarComercio')
 
-router.get('/', validarIdParamComercio, getComercios);
+router.get('/', getComercios);
 router.get('/:_id', validarIdParamComercio, getComercio);
 router.post('/', validarPostComercio, postComercio);
 router.put('/:_id', validarIdParamComercio, validarPutComercio, putComercio);

@@ -15,7 +15,7 @@ const {
     validarPutUsuario,
 } = require('../middlewares/validarUsuario')
 
-router.get('/', validarIdParamUsuario, getUsuarios);
+router.get('/', getUsuarios);
 router.get('/:_id', validarIdParamUsuario, getUsuario);
 router.post('/', validarPostUsuario, postUsuario);
 router.put('/:_id',validarIdParamUsuario, validarPutUsuario, putUsuario);

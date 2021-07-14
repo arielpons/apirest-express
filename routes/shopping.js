@@ -15,7 +15,7 @@ const {
     validarPutShopping,
 } = require('../middlewares/validarShopping')
 
-router.get('/', validarIdParamShopping, getShoppings);
+router.get('/', getShoppings);
 router.get('/:_id', validarIdParamShopping, getShopping);
 router.post('/', validarPostShopping, postShopping);
 router.put('/:_id', validarIdParamShopping, validarPutShopping, putShopping);
