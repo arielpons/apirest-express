@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router();
 
 const { 
-    getShoppings,
     getShopping,
     postShopping,
     putShopping,
@@ -15,7 +14,6 @@ const {
     validarPutShopping,
 } = require('../middlewares/validarShopping')
 
-router.get('/', getShoppings);
 router.get('/:_id', validarIdParamShopping, getShopping);
 router.post('/', validarPostShopping, postShopping);
 router.put('/:_id', validarIdParamShopping, validarPutShopping, putShopping);

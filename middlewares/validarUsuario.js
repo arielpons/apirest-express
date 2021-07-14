@@ -41,8 +41,7 @@ try{
     return next();   
 } catch(err){
     console.log(err)
-    return res.status(400).send({
-        mensaje: "Datos no válidos",
+    return res.status(400).send({mensaje: "Datos no válidos",
         })
     }
 }
