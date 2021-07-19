@@ -3,9 +3,9 @@ const express = require("express");
 const morgan = require("morgan");
 const cors = require('cors');
 
-const routesUsuarios = require('./routes/usuarios');
-const routesComercios = require('./routes/comercio');
-const routesShopping = require('./routes/shopping');
+const routesUsuarios = require('./routes/usuarios.routes');
+const routesComercios = require('./routes/comercio.routes');
+const routesShopping = require('./routes/shopping.routes');
 const dbConnection = require("./configs/mongodb");
 
 const app = express();
