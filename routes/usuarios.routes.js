@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router();
 
-const { 
+const {
+    getAllUsuarios,
     getUsuario,
     postUsuario,
     putUsuario,
@@ -14,6 +15,7 @@ const {
     validarPutUsuario,
 } = require('../middlewares/validarUsuario')
 
+router.get("/", getAllUsuarios);
 router.get('/:_id', validarIdParamUsuario, getUsuario);
 router.post('/', validarPostUsuario, postUsuario);
 router.put('/:_id',validarIdParamUsuario, validarPutUsuario, putUsuario);
