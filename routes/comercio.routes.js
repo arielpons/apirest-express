@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router();
 
-const { 
+const {
+    getAllComercios,
     getComercio,
     postComercio,
     putComercio,
@@ -14,6 +15,7 @@ const {
     validarPutComercio,
 } = require('../middlewares/validarComercio')
 
+router.get("/", getAllComercios);
 router.get('/:_id', validarIdParamComercio, getComercio);
 router.post('/', validarPostComercio, postComercio);
 router.put('/:_id', validarIdParamComercio, validarPutComercio, putComercio);
