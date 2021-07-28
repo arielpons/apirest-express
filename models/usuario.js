@@ -21,16 +21,22 @@ const UsuarioSchema = Schema(
         email: {
             type: String,
             required: true,
+            unique: true
         },
-        roles: [{
+        rol:{
             type: String,
             required: true,
             enum: ["ADMIN", "SHOPPING_MANAGER", "COMMERCE_MANAGER", "USER"]
-        }]
+        },
     },
     {
         timestamps: true
     }
 );
+
+UsuarioSchema.methods.toJSON = function (){
+    const { password, createdAt, updatedAt, __v, ...usuario } = this.toObject()
+    return usuario ;
+}
 
 module.exports = model("Usuario", UsuarioSchema);
